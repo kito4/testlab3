@@ -17,7 +17,7 @@ public class DateTimeBean implements Serializable {
     private static final long serialVersionUID = 1234567L;
 
     public String getDateTime() {
-        return "timebruh";
+        return Instant.now().atZone(ZoneId.of("Europe/Moscow")).format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 }
-//Instant.now().atZone(ZoneId.of("Europe/Moscow")).format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+

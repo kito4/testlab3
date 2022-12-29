@@ -14,6 +14,8 @@
           <element id="module-output" name="testlab3" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.icefaces:icefaces-ace:4.3.0" />
+          <element id="library" level="project" name="Maven: org.icefaces:icefaces:4.3.0" />
           <element id="library" level="project" name="Maven: org.hibernate.orm:hibernate-core:6.1.4.Final" />
           <element id="library" level="project" name="Maven: jakarta.persistence:jakarta.persistence-api:3.0.0" />
           <element id="library" level="project" name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.0" />
@@ -34,6 +36,8 @@
           <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:9.1.0" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:3.0.2" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:3.0.2" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.5.0" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

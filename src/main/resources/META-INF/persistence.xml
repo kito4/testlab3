@@ -7,10 +7,10 @@
         <class>com.kito.testlab3.Data</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-            <property name="javax.persistence.jdbc.url"    value="jdbc:postgresql://localhost:5432/lab_3_test" />
-            <property name="javax.persistence.jdbc.user" value="lab3" />
-            <property name="javax.persistence.jdbc.password" value="123" />
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url"    value="jdbc:postgresql://localhost:5432/studs" />
+            <property name="jakarta.persistence.jdbc.user" value="s334582" />
+            <property name="jakarta.persistence.jdbc.password" value="9vyuF0sjcb0NvO69" />
             <property name="eclipselink.ddl-generation" value="create-tables" />
             <property name="eclipselink.ddl-generation.output-mode" value="database" />
         </properties>

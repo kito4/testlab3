@@ -1,7 +1,7 @@
 package com.kito.testlab3;
-import jakarta.annotation.ManagedBean;
-import jakarta.enterprise.context.RequestScoped;
-import jakarta.enterprise.context.SessionScoped;
+import javax.annotation.ManagedBean;
+import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import jdk.jfr.Name;
 
 import java.io.Serializable;

@@ -83,19 +83,19 @@ public class ExecutionBean {
 
     private boolean checkIfInside(double x, double y, int r)
     {
-        if (x > 0)
+        if (x >= 0)
         {
-            if (y > 0)
-                return false;
-            else
+            if (y >= 0)
                 return y*y <= r*r - x*x;
+            else
+                return y >= x * 2 - r;
         }
         else
         {
-            if (y > 0)
-                return x >= -r / 2. && y <= r;
+            if (y >= 0)
+                return x >= -r && y*2 <= r;
             else
-                return y >= -x * 2 - r;
+                return false;
         }
     }
 

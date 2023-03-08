@@ -20,7 +20,7 @@ function validate()
     const submit = document.getElementById('input_form:submit');
     fl &= validate_by_id('input_form:x', -5, 5, 'input_form:x');
     fl &= r_selected;
-    // fl &= validate_by_id('input_form:y_text', -4, 4, 'input_form:y');
+
     submit.disabled = !fl;
     return fl;
 }
@@ -58,33 +58,21 @@ function point_clicked(e)
     document.getElementById('input_form:y_text').value = y;
     if (validate())
     {
-        // document.getElementById('input_form:y').hidden = true;
-        // document.getElementById('input_form:y_text').hidden = false;
+
         document.getElementById('input_form:submit').click();
     }
     else
     {
-        // document.getElementById('input_form:x').value = "";
-        // document.getElementById('input_form:y').value = "0.0";
-        // document.getElementById('input_form:y_text').value = "";
-        // document.getElementById('input_form:y').hidden = true;
-        // document.getElementById('input_form:y_text').hidden = false;
-        // validate();
+
     }
 }
 
 function loaded(circles_raw)
 {
-    // circles = circles.replaceAll('&lt;', '<').replaceAll('&gt;', '>');
-    // // alert(circles);
-    // console.log(circles_raw);
-    // console.log(circles);
-    // document.getElementById('input_form:hide_x').hidden=true;
-    // document.getElementById('input_form:hide_y').hidden=true;
-    // document.getElementById('input_form:hide_r').hidden=true;
+
     validate();
     document.getElementById('graph').addEventListener("click", point_clicked, false);
-    // document.getElementById('graph').append(`<circle cx=\"${50 + coords[0] * 8}%\" cy=\"${50 - coords[1] * 8}%\" r=\"2%\" fill=\"yellow\"></circle>`);
+
 
 
 }
@@ -99,10 +87,16 @@ function redrawGraph(circles_raw)
     {
         let coords = circles[i];
         let circle = document.createElementNS(svgns, 'circle');
-        circle.setAttribute('cx', `${50 + coords[0] * 8}%`);
-        circle.setAttribute('cy', `${50 - coords[1] * 8}%`);
+        let x_1 = coords[0];
+        let x_2 = parseFloat(coords[1]);
+        let y_1 = coords[2];
+        let y_2 = parseFloat(coords[3]);
+        let x = x_1 + (x_2/(10**x_2.toString().length));
+        let y = y_1 + (y_2/(10**y_2.toString().length));
+        circle.setAttribute('cx', `${50 + x * 8}%`);
+        circle.setAttribute('cy', `${50 - y * 8}%`);
         circle.setAttribute('r', '2%');
-        circle.setAttribute('fill', `${coords[3] ? 'green' : 'red'}`);
+        circle.setAttribute('fill', `${coords[5] ? 'green' : 'red'}`);
         document.getElementById('graph').appendChild(circle);
     }
 }
@@ -113,5 +107,5 @@ function r_change(r)
     document.getElementById('draw').setAttribute("style", "scale: " + 20 * r_val + "%; top: 0; position: absolute");
     r_selected = true;
     validate();
-    // console.log(r);
+
 }
